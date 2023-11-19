@@ -47,13 +47,17 @@ directory, run the `ls` command. And, if you would like to change your working
 directory, you can call the `cd` command followed by the name of your target
 working directory.
 
-## Step 2: using git bash create a repo's folder by typing in:
+## Step 2: Use git bash to create a folder
 
-``` mkdir repos ```
+To create a folder, use the `mkdir` command followed by the name of the folder.
+``` 
+mkdir repos 
+```
 
-and 
-
-``` cd repos ```
+Navigate to that newly created folder with the `cd` command.
+``` 
+cd repos
+```
 
 ## Step 3: clone the repository from git.sdsurocketproject.org
 
