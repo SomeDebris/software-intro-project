@@ -61,27 +61,35 @@ cd repos
 
 ## Step 3: clone the repository from git.sdsurocketproject.org
 
-There should be a yellow part on the screen that say ~/repos that shows that
-where you are at, it's to this folder we are going to be cloning our linked
-list. There are two ways of cloning, ssh and https. For now will we use https,
-but in the future most devs I have worked with use ssh due to how easy it is to
-manage ssh keys on a machine and clone from their repos. 
+To download code from other git users, use `git clone`. The act of downloading
+a local copy of a code repository using this method is called "Cloning".
 
-Go to the repo's homepage and on the top right there is a blue button that says
-clone, click it and copy the https url address option.
+After creating and navigating to the `repos/` folder, look at your prompt. In
+yellow text, you should see `~/repos`, which shows that your working directory
+is currently `~/repos`. The tilde (`~`) symbol is your home directory. Run the
+`pwd` command to see the path expanded, and remember to run the `ls` command if
+you are not sure what is in the folder.
 
-To clone the repo run:
+We will clone this project using HTTPS (If you have already set up SSH with
+git, you likely already know what to do).
 
-``` git clone
-https://git.sdsurocketproject.org/avionics/intro-projects/software_intro_project_linked_lists.git
+Go to the repository's homepage. In the top right corner, there is a blue
+button that says "clone". Click it and copy the HTTPS URL.
+
+Paste it into the command shown below:
+
+``` 
+git clone https://git.sdsurocketproject.org/avionics/intro-projects/software_intro_project_linked_lists.git
 ```
 
-It may prompt for login credentials, enter those and it should start pulling
-the code. It will place a folder in repos that is the name of the cloned repo.
+After running this command, git may ask you to enter your login credentials.
+When you do so, git will begin downloading the repository into a new folder
+titled `software_intro_project_linked_lists/` in the directory you are
+currently in. Remember to run the `ls` command if you feel lost.
 
-For future reference try and use ssh keys, it's a lot more common and safer in
-industry. Also doesn't ever make you login since verifcation is done through
-key exchange.
+In the future, you will learn how to set up SSH with git. SSH is notably
+simpler to use after the first setup. Try generating yourself an SSH key using
+the `ssh-keygen` command. Doing this is NOT required.
 
 ## Step 4: make a branch with your name on it to edit changes on
 
