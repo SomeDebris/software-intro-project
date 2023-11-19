@@ -28,38 +28,32 @@ I've taken C++ classes that use it as the preferred IDE.
 ## Step 1: install git bash
 
 Step one is to install git bash from the [the git
-website](https://git-scm.com/downloads)
+website](https://git-scm.com/downloads).
 
-When installing it is safe to choose all the default options. (unless you have
-other preferences)
-
-NOTE:
-
-So when you open it you will be dropped into a shell in your home directory.
-For me is says `myuser@machine MINGW64 ~`
+Unless you have other preferences, choose all the default options during the
+installation.
 
 NOTE:
 
-A dollar sign ($) means the shell command is run as the normal user. A pound
-sign (#) means the command is run with elevated privileges (as root or
-administrator). Do not include either in the copy/paste
+When you open git bash, you will be dropped into a shell in your home
+directory. For me, it says `myuser@machine MINGW64 ~`
 
 NOTE:
 
-If we go ahead and run the list command "ls" it will print out the contents of
-the directory, in windows I believe this is where our user folder is. If you
-have a place where you normally have code you can go to it by using "cd" or
-"change directory", to see where you are at in the filesystem you can also send
-"pwd" which is path working directory. If none of that made sense, dont fret
-it. 
+The shell may be daunting at first, but remember that it is simply just another
+type of file explorer. To see the folder that your shell is running in (i.e.
+working directory), use the `pwd` command. To list the contents of the working
+directory, run the `ls` command. And, if you would like to change your working
+directory, you can call the `cd` command followed by the name of your target
+working directory.
 
 ## Step 2: using git bash create a repo's folder by typing in:
 
-``` $mkdir repos ```
+``` mkdir repos ```
 
 and 
 
-``` $cd repos ```
+``` cd repos ```
 
 ## Step 3: clone the repository from git.sdsurocketproject.org
 
@@ -74,7 +68,7 @@ clone, click it and copy the https url address option.
 
 To clone the repo run:
 
-``` $git clone
+``` git clone
 https://git.sdsurocketproject.org/avionics/intro-projects/software_intro_project_linked_lists.git
 ```
 
@@ -95,11 +89,11 @@ removed things, but it will compile.
 
 **Please name the branch uniquely do no just past branch name**
 
-``` $git checkout -b chris-branch ```
+``` git checkout -b chris-branch ```
 
 also run:
 
-``` $git push --set-upstream origin chris-branch ```
+``` git push --set-upstream origin chris-branch ```
 
 it will let you know you have switched branches, now you can do your work and
 it will NOT be captured on master until ready for review through a PR.  Once
@@ -131,7 +125,7 @@ dev.
 
 ## Step 6: push code to your branch Once you are done coding go ahead and run:
 
-``` $git pull ```
+``` git pull ```
 
 this will synchronize your personal machine with remote. this is necessary
 before pushs as it prevents merge conflicts from rearing themselves on remote
@@ -140,7 +134,7 @@ hex files since it's no longer human readable.
 
 Once that is done we need to see how things look on your machine run:
 
-``` $git status ```
+``` git status ```
 
 if you have untracked changes they wil be red, if they are tracked they will be
 green. Ideally, since you are only supposed to change linked_list.cpp that
@@ -152,17 +146,17 @@ you'll see in red:
 
 go ahead and run 
 
-``` $git add linked_list.cpp ```
+``` git add linked_list.cpp ```
 
 NOTE: tab complete means you dont need to list out the entire file
 
 run git status again and it will be green since the changes are accounted for:
 
-``` $git status ```
+``` git status ```
 
 next create a commit that describes your changes 
 
-``` $git commit` ```
+``` git commit` ```
 
 Note: there are many ways to do this far better than above, but for starting
 out this will work. Normally vim or nano would open and you ideally give a
@@ -170,16 +164,16 @@ succinct explanation of your changes.
 
 now: 
 
-``` $git pull ```
+``` git pull ```
 
-``` $git push ```
+``` git push ```
 
 this will write all of your changes to the remote branch that is now available
 to everyone to work on and run locally if they wish.
 
 hint: while on your branch run:
 
-``` $git diff master ```
+``` git diff master ```
 
 "q" to quit
 
